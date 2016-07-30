@@ -4,7 +4,7 @@
 }
 
 body{ 
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
     overflow-y: scroll;
     overflow-x: hidden;
 }
@@ -12,4 +12,107 @@ body{
 p{
     
     font-size: 14px; 
+}
+
+/* ====== Header ========= */ 
+.header { 
+    background-image: url("../images/header-bg.jpg"); 
+    /*background attachment describes whether the image should scroll or be fixed*/ 
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 50% 50%; 
+    /*make sure that the background size will only cover the screen size*/ 
+    background-size: cover; 
+    /*prefix for mozilla browser*/
+    -moz-background-size: cover; 
+    /*prefix for opera browser*/
+    -o-background-size: cover; 
+    /*Webkit includes both chrome and safari browsers*/ 
+    -webkit-background-size: cover; 
+}
+
+/*This adds like a filter on top of the background image*/ 
+.header-overlay{
+    background-color: rgba(31, 31, 31, 0.75); 
+}
+
+.header-iphone img { 
+    width: 100%; 
+}
+
+.logo {
+    padding-bottom: 50px; 
+}
+
+.header-text h1{ 
+    color: #fff; 
+    font-size: 35px; 
+    font-weight: 300; 
+    line-height: 45px; 
+    padding-top: 30px; 
+    text-transform: uppercase; 
+}
+
+.header-text p{ 
+    color: #fff; 
+    font-size: 17px; 
+    font-weight: 300; 
+    line-height: 28px; 
+}
+
+.header-btns{
+    margin-top: 90px; 
+    margin-bottom: 50px; 
+}
+
+.btn-download,
+.btn-download:focus,
+.btn-download:active, 
+.btn-download:visited
+{
+    background: transparent; 
+    border-color: #129CF3; 
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+    padding-left: 30px;
+    padding-right: 30px; 
+    font-size: 19px;
+    text-transform: uppercase; 
+    border-radius: 3px; 
+    transition: all 1s; 
+    -webkit-transition: all 1s; 
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+}
+
+
+.btn-download:hover {
+    background-color: #129CF3; 
+    color: #fff; 
+}
+
+.btn-tour, 
+.btn-tour:focus,
+.btn-tour:active, 
+.btn-tour:visited{
+    color: #A9ADB0; 
+    margin-left: 20px; 
+    text-transform: uppercase; 
+    font-size: 19px;
+    font-weight: 500; 
+    background: transparent; 
+    transition: all 1s;
+    -webkit-transition: all 1s; 
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+}
+
+.btn-tour:hover{
+    color: fff; 
+}
+
+.btn-tour i {
+    font-size: 20px; 
+    padding-left: 5px; 
+    color: #129CF3; 
 }
