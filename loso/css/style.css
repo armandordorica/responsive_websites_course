@@ -50,7 +50,7 @@ p{
 
 /* ====== Navigation ========= */
 .navbar-default{
-    background-color: transparent !important; 
+    background-color: transparent ; 
     border-color: #444 !important; 
     z-index: 110 !important;
     transition: all 1s !important; 
@@ -60,7 +60,7 @@ p{
 }
 
 .navbar-default .navbar-nav > li > a {
-    color: #B5B5B5; 
+    color: #A9ADB0 !important; 
     font-family: "Raleway", sans-serif; 
     transition: all 1s !important; 
     -o-transition: all 1s !important; 
@@ -69,11 +69,11 @@ p{
 }
 
 .navbar-default .navbar-nav > li > a:hover{
-    color: #129CF3 !important;
+    color: #129CF3 ;
 }
 
 .navbar-default .navbar-nav > li > a:focus{
-    color: #B5B5B5 !important;
+    color: #B5B5B5 ;
 }
 
 .navbar-brand{
