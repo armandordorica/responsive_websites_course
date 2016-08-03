@@ -60,40 +60,59 @@ $(document).ready(function(){
   });
 });
 
-
 /* Active menu item on click */
-$(document).ready(function(){
+$(document).ready(function() {
     'use strict';
-    $('.navbar-nav li a').click(function(){
+    $('.navbar-nav li a').click(function(){    
         'use strict';
-        
         $('.navbar-nav li a').parent().removeClass("active");
         
         $(this).parent().addClass("active");
     });
+});
+
+//Highlight menu item on scroll
+$(document).ready(function(){
+    'use strict';
+    
+    $(window).scroll(function(){
+        'use strict';
+        
+        $("section").each(function(){
+            'use strict';
+            
+            var bb = $(this).attr("id"); //ABOUT, CONTACT, DOWNLOAD
+            var hei = $(this).outerHeight();
+            var grttop = $(this).offset().top - 70; //this will allow to retrieve the current position using the offset function
+            //$(window).scrollTop() returns the vertical scrollbar position of the window
+            if($(window).scrollTop() > grttop && $(window).scrollTop < grttop + hei){
+                $(".navbar-nav li a[href='#" + bb + "']").parent().addClass("active");        
+            } else{
+                $(".navbar-nav li a[href='#" + bb + "']").parent().removeClass("active");  
+            }
+            
+        });
+    });
     
 });
 
-
-/* Highlight menu item on scroll */
+//Add auto padding to header
 $(document).ready(function(){
     'use strict';
-    $(window).scroll(function(){ 
+    
+    setInterval(function(){
         'use strict';
         
-        $("section").each(function() {
-            'use strict';
-        var bb = $(this).attr("id"); //ABOUT, CONTACT, DOWNLOAD
-        var hei = $(this).outerHeight();
-        var grttop = $(this).offset().top - 70; 
+        var windowHeight = $(window).height();
+        var containerHeight = $(".header-container").height();
+        var padTop = windowHeight - containerHeight;
         
-        if ($(window).scrollTop() > grttop && $(window).scrollTop < grttop + hei){
-            $(".navbar-nav li a[href='#" + bb + "']").parent().addClass("active");        
-        }else{
-             $(".navbar-nav li a[href='#" + bb + "']").parent().removeClass("active"); 
-        }
+        $(".header-container").css({
+            'padding-top': Math.round( padTop / 2 ) + 'px', 
+            'padding-bottom': Math.round( padTop / 2) + 'px'
+            
+        } );
         
-    });
-  });
+    }, 10)
     
 });
