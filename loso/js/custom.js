@@ -139,3 +139,9 @@ $(document).ready(function() {
         time: 2000
     });
 });
+
+//Add animation/initialize wow
+$(document).ready(function(){
+    'use strict';
+     new WOW().init();
+});
