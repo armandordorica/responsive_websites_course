@@ -116,3 +116,31 @@ $(document).ready(function(){
     }, 10)
     
 });
+
+
+//Add bx slider to screens
+$(document).ready(function() {
+    
+    $('.bxslider').bxSlider({
+        
+        slideWidth: 292.5,
+        auto: true,
+        minSlides: 1, 
+        maxSlides: 3, 
+        slideMargin: 50
+    });
+    
+});
+//$(document).ready(function(){
+//   $('.bxslider').bxSlider({
+//       
+//       slideWidth: 292.5,
+//       auto: true,
+//       minSlides: 1, 
+//       maxSlides: 3, 
+//       slideMargin: 50
+//   });
+//    
+//});
+
+
