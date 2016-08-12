@@ -11,12 +11,20 @@
     .header-iphone {
         display: none; 
     }
+    
+    .header-text, .header-btns {
+        text-align: center;
+    }
 }
 
 /*Medium devices, desktop */
 @media only screen and (min-width: 992px){
     .header-iphone {
         display: none; 
+    }
+    
+    .header-text, .header-btns {
+        text-align: center;
     }
 }
 
